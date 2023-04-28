@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="@dimen/card_corner_radius_small"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="0.3dp">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_margin="@dimen/marginSmallSize"
+                android:src="@drawable/icon_men" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/marginMediumSize"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contacts_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/largeTextSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNumberContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginMiddleTwoViewSize"
+                    android:text="@string/_99899_645_26_11"
+                    android:textSize="@dimen/largeTextSize" />
+            </LinearLayout>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+            <ImageButton
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dots"
+                android:id="@+id/btMore"
+                android:padding="6dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="@string/menu_button" />
+        </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

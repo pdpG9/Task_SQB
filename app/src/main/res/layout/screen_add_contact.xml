@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardBottomSheet"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:orientation="vertical">
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/progress"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                app:cardCornerRadius="39dp"
+                android:id="@+id/bt_iconMen"
+                app:cardBackgroundColor="@color/purchases_item_blue"
+                android:layout_margin="@dimen/marginSmallSize">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_gravity="center"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/icon_men" />
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="78dp"
+                android:visibility="gone"
+                android:layout_height="78dp"
+                app:cardCornerRadius="39dp"
+                android:id="@+id/bt_iconWomen"
+                app:cardBackgroundColor="@color/purchases_item_blue"
+                android:layout_margin="@dimen/marginSmallSize">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_gravity="center"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/icon_woman" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_errorImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_marginStart="@dimen/marginMediumSize"
+            android:textColor="@color/purchases_item_red"
+            android:textSize="@dimen/smallTextSize" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginMediumSize"
+            android:layout_marginVertical="@dimen/marginMiddleTwoViewSize"
+            android:hint="First name"
+            android:maxLength="18"
+            android:maxLines="1" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginMediumSize"
+            android:layout_marginVertical="@dimen/marginMiddleTwoViewSize"
+            android:hint="Last name"
+            android:maxLength="18"
+            android:maxLines="1" />
+
+        <com.arefbhrn.maskededittext.MaskedEditText
+            android:id="@+id/phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginMediumSize"
+            android:layout_marginVertical="@dimen/marginMiddleTwoViewSize"
+            android:hint="@string/_912345678"
+            android:inputType="phone"
+            android:typeface="monospace"
+            app:allowed_chars="1234567890"
+            app:keep_hint="true"
+            app:mask="+998-##-###-##-##"
+            tools:ignore="MissingClass" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/marginLargeSize" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginMediumSize"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_grey"
+                android:text="@string/cancel"
+                app:cornerRadius="@dimen/card_corner_radius_small"
+                app:icon="@drawable/ic_close" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/rta_green2"
+                android:text="@string/save"
+                app:cornerRadius="@dimen/card_corner_radius_small"
+                app:icon="@drawable/ic_baseline_check_24" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

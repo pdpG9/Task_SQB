@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smallIconSize">14dp</dimen>
+    <dimen name="smallTextSize">10sp</dimen>
+    <dimen name="mediumtextSize">12sp</dimen>
+    <dimen name="largeTextSize">16sp</dimen>
+    <dimen name="titleTextSize">18sp</dimen>
+
+    <dimen name="marginLargeSize">18dp</dimen>
+    <dimen name="marginMediumSize">16dp</dimen>
+    <dimen name="marginSmallSize">8dp</dimen>
+    <dimen name="marginMiddleTwoViewSize">4dp</dimen>
+    <dimen name="card_corner_radius_small">12dp</dimen>
+</resources>
